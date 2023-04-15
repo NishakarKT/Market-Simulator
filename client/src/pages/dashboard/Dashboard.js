@@ -46,7 +46,7 @@ function Copyright(props) {
     >
       {"Copyright © "}
       <Link color="inherit" href="#">
-        Kodein Hackathon
+        Market Simulator
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}

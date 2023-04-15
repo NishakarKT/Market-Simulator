@@ -23,7 +23,7 @@ const Crypto = lazy(() => import("./pages/crypto/Crypto"));
 const App = () => {
   const navigate = useNavigate();
   const [dark, setDark] = useState(
-    Boolean(JSON.parse(localStorage.getItem("kodein"))?.dark)
+    Boolean(JSON.parse(localStorage.getItem("market-simulator"))?.dark)
   );
 
   useEffect(() => {
@@ -33,9 +33,9 @@ const App = () => {
   }, [dark]);
 
   const handleDarkMode = () => {
-    const localData = JSON.parse(localStorage.getItem("kodein")) || {};
+    const localData = JSON.parse(localStorage.getItem("market-simulator")) || {};
     localStorage.setItem(
-      "kodein",
+      "market-simulator",
       JSON.stringify({ ...localData, dark: !dark })
     );
     setDark(!dark);
